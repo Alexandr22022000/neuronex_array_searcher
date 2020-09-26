@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popup</title>
+</head>
+<body style="min-width: 300px; margin-bottom: 0">
+<button id="search" style="width: 100%">SEARCH</button>
+<p style="text-align: center">Or press Ctrl(Option)+Shift+F</p>
+
+<div>
+    <textarea id="words_input" style="display: inline-block; width: 80%" ></textarea>
+    <button id="words_add" style="display: inline-block; width: 15%; vertical-align: top">ADD</button>
+</div>
+
+<div style="margin: 8px">
+    <p style="display: inline-block; margin: 0" id="words_count">123 items</p>
+
+    <div style="float: right">
+        <button id="words_show">SHOW</button>
+        <button id="words_delete">DELETE</button>
+    </div>
+</div>
+
+<div style="border: 1px black solid" id="words">
+    <a>Word</a><br/>
+</div>
+
+<p style="text-align: center; margin: 16px 0 0 0">Provide by <a href="https://neuronex.pro" target="_blank">neuronex</a></p>
+
+<!-- NEW FEATURES -->
+
+<button id="settings_show" style="display: none">settings</button>
+
+<div id="settings_container" style="display: none">
+    <h2 style="text-align: center">Settings</h2>
+
+    <p>Separators:</p>
+
+    <div>
+        <input id="separators_input" style="display: inline-block; width: 80%" />
+        <button id="separators_add" style="display: inline-block; width: 15%">ADD</button>
+    </div>
+
+    <ol id="separators_container">
+        <li><p style="display: inline-block; margin: 0 8px 0 0">/n</p><button>X</button></li>
+        <li><p style="display: inline-block; margin: 0 8px 0 0">/n</p><button>X</button></li>
+    </ol>
+    <button id="separators_reset">RESET</button>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
