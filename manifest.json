@@ -2,14 +2,15 @@
     "name": "Neuronex Array Searcher",
     "version": "1.0",
     "description": "Searching on web page by array. Very useful with data from Google Sheets or Microsoft Excel",
-    "permissions": ["<all_urls>", "storage", "declarativeContent", "activeTab"],
+    "host_permissions": ["http://*/*", "https://*/*"],
+    "permissions": ["storage", "declarativeContent", "activeTab"],
     "icons": {
         "16": "images/logo.png",
         "32": "images/logo.png",
         "48": "images/logo.png",
         "128": "images/logo.png"
     },
-    "page_action": {
+    "action": {
         "default_popup": "src/popup/index.html",
         "default_icon": {
             "16": "images/logo.png",
@@ -27,8 +28,7 @@
         }
     ],
     "background": {
-        "scripts": ["src/background/index.js"],
-        "persistent": false
+        "service_worker": "src/background/index.js"
     },
-    "manifest_version": 2
+    "manifest_version": 3
 }

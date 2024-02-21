@@ -1,12 +1,13 @@
 chrome.runtime.onMessage.addListener((msg, sender) => {
-    if (msg.type !== 'SEARCH') return;
-    chrome.runtime.sendMessage({type: 'START'});
-
+    // FIXME: duplicated code (used for button)
     chrome.storage.sync.get('words', ({words}) => {
         if (!words) words = [];
 
         const text = document.body.innerHTML;
         words = words.filter(word => text.indexOf(word) !== -1);
-        chrome.runtime.sendMessage({type: 'END', results: words});
+
+        if (!words.length) return alert('Not found!');
+        words = words.filter((item, index) => words.indexOf(item) === index);
+        alert('Found!!!!!!!!!!!\n' + words.join(', '));
     });
 });
