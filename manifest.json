@@ -23,7 +23,7 @@
         {
             "all_frames": true,
             "matches": ["<all_urls>"],
-            "js": ["src/contentScripts/hotkey.js", "src/contentScripts/searchEngine.js", "src/contentScripts/result.js"],
+            "js": ["src/contentScripts/hotkey.js", "src/contentScripts/searchEngine.js"],
             "run_at": "document_end"
         }
     ],
